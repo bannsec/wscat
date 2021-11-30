@@ -10,10 +10,8 @@ version = '0.1'
 #    long_description = f.read()
 long_description = "See website for more info."
 
-# Frida 12.6.11 -> https://github.com/frida/frida/issues/986
-
 setup(
-    name='wscat',
+    name='pywscat',
     version=version,
     description='Simple Websocket Netcat thing',
     long_description=long_description,
@@ -30,11 +28,12 @@ setup(
         'Environment :: Console'
     ],
     keywords='python3 websockets netcat',
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    packages=["pywscat"],
     install_requires=['websockets'],
     entry_points={
         'console_scripts': [
-            'wscat = wscat.cli:main',
+            'wscat = pywscat.cli:main',
+            'pywscat = pywscat.cli:main',
         ],
     },
 )

@@ -4,7 +4,7 @@ Super simple app for manually testing connections to a websocket server.
 
 # Install
 ```bash
-pip install wscat
+pip install pywscat
 ```
 
 # Example
